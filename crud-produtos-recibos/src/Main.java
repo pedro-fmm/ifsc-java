@@ -78,7 +78,7 @@ public class Main {
 					Produto produtoVenda = pesquisarProduto(listaProdutos, codigoProdutoVenda);
 						
 					if (produtoVenda != null) {						
-						if(produtoVenda.getEstoque() < qtdeProduto) {
+						if(produtoVenda.getEstoque() <= qtdeProduto) {
 							System.out.println("\nNão há estoque suficiente\n");
 						} else {
 							produtoVenda.setEstoque(produtoVenda.getEstoque() - qtdeProduto);
